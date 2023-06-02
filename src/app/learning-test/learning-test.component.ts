@@ -14,17 +14,17 @@ export class LearningTestComponent {
   @Input() color?: 'primary' | 'secondary';
   @Input() warn?: boolean;
 
-  get buttonClass(): string {
-    let returnString = 'app-button';
+  get buttonClass(): string[] {
+    let returnString = ['app-button'];
     
     if (this.warn) {
-      returnString += ' warn-button';
+      returnString.push('warn-button');
     } else {
       if (this.color === 'primary') {
-        returnString += ' primary-button';
+        returnString.push('primary-button');
       }
       if (this.color === 'secondary') {
-        returnString += ' secondary-button';
+        returnString.push('secondary-button');
       }
     }
 
