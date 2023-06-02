@@ -5,15 +5,23 @@
     min-width: 100px;
     margin: 4px;
     border: none;
-    background-color: #fafafa;
-    color: #000;
   
     &:hover {
       cursor: pointer;
     }
   }
   
-  .button-active {
-    background-color: #30597c;
+  .warn-button {
+    background-color: #e00040;
+    color: white;
+  }
+  
+  .primary-button {
+    background-color: #342ea2;
+    color: white;
+  }
+  
+  .secondary-button {
+    background-color: #0f6a20;
     color: white;
   }

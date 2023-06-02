@@ -11,13 +11,23 @@ import { Component, Input } from '@angular/core';
 })
 
 export class LearningTestComponent {
-  @Input() active: boolean = true;
+  @Input() color?: 'primary' | 'secondary';
+  @Input() warn?: boolean;
 
   get buttonClass(): string {
-    if (this.active) {
-      return 'app-button button-active';
-    } else{
-      return 'app-button';
+    let returnString = 'app-button';
+    
+    if (this.warn) {
+      returnString += ' warn-button';
+    } else {
+      if (this.color === 'primary') {
+        returnString += ' primary-button';
+      }
+      if (this.color === 'secondary') {
+        returnString += ' secondary-button';
+      }
     }
+
+    return returnString;
   }
 }
