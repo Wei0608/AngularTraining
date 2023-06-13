@@ -8,7 +8,7 @@
     (change)="updateRed($event)"
   />
   <!-- TODO change background color of this div to match currently selected value of red, like rgb(<value>,0,0)  -->
-  <div>{{ red }}</div>
+  <div [ngStyle]="getRed">{{ red }}</div>
 </section>
 
 <section>
@@ -21,7 +21,7 @@
     (change)="updateGreen($event)"
   />
   <!-- TODO change background color of this div to match currently selected value of green, like rgb(0,<value>,0)  -->
-  <div>{{ green }}</div>
+  <div [ngStyle]="getGreen">{{ green }}</div>
 </section>
 
 <section>
@@ -34,7 +34,7 @@
     (change)="updateBlue($event)"
   />
   <!-- TODO change background color of this div to match currently selected value of blue, like rgb(0,0,<value>)  -->
-  <div>{{ blue }}</div>
+  <div [ngStyle]="getBlue">{{ blue }}</div>
 </section>
 
 <hr />
@@ -42,5 +42,5 @@
 <section>
   <span>Result:</span>
   <!-- TODO change background color of this div to match currently selected value of all three colors, like rgb(<red>, <green>, <blue>)  -->
-  <div></div>
+  <div [ngStyle]="resultStyle"></div>
 </section>

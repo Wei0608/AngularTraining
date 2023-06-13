@@ -21,4 +21,20 @@ export class AppComponent {
   updateBlue(event: Event) {
     this.blue = +(<HTMLInputElement>event.target).value;
   }
+
+  get getRed() {
+    return { backgroundColor: `rgb(${this.red},0,0)` };
+  }
+
+  get getGreen() {
+    return { backgroundColor: `rgb(0,${this.green},0)` };
+  }
+
+  get getBlue() {
+    return { backgroundColor: `rgb(0,0,${this.blue})` };
+  }
+
+  get resultStyle() {
+    return { backgroundColor: `rgb(${this.red},${this.green},${this.blue})` };
+  }
 }
